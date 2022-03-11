@@ -1,0 +1,73 @@
+[tool]
+[tool.poetry]
+name = "xe_likelihood"
+version = "0.1.0"
+homepage = "https://github.com/XENON1T/xe_likelihood"
+description = "Binwise approximate inference for XENON1T and XENONnT experiments."
+authors = [
+    "XENON collaboration <knut.dundas.moraa@columbia.edu>",
+    "Hagar Landsman <hagar.landsman@weizmann.ac.il>",
+    "Knut Dundas Morå <knut.dundas.moraa@columbia.edu>",
+    "Jacques Pienaar <jpienaar@uchicago.edu>",
+    ]
+readme = "README.rst"
+license =  "MIT"
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+]
+packages = [
+    { include = "xe_likelihood" },
+]
+include = [
+    { path = "data/*" },
+    { path = "data/ancillary_data/*" },
+    { path = "data/xe1t_nr_1ty_result/*" },
+    { path = "data/xent_nr_20ty_projection/*" },                     
+]
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+scipy = "*"
+matplotlib = "*"
+numpy = "*"
+tqdm = "*"
+pandas = "!=1.3.4"
+wimprates = {version = "^0.3.2", optional = true}
+click = "^8.0.3"
+
+[tool.poetry.extras]
+wimps = ["wimprates"]
+
+[tool.poetry.dev-dependencies]
+bumpversion = "*"
+docutils = "0.12" 
+coverage = "*"
+flake8 = "*"
+isort = "*"
+pylint = "*"
+pytest = "*"
+sphinx = "*"
+tox = "*"
+yapf = "*"
+sphinx-material = "*"
+nbsphinx = "0.8.3"
+invoke = "*"
+jupyter = "*"
+jupyterlab = "*"
+
+[tool.poetry.scripts]
+xe-likelihood = "xe_likelihood.cli:main"
+
+[build-system]
+requires = ["poetry>=0.12", "setuptools"]
+build-backend = "poetry.masonry.api"
+
+[tool.dephell.main]
+versioning = "semver"
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
