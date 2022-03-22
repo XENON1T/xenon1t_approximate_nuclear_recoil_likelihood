@@ -6,7 +6,7 @@
         "Date": "10/19/2021, 15:33:03"
     },
     "Xedges": {
-        "info": "Edges in reconstructed nuclear recoil energy [keV] used in the migration matrix",
+        "info": "Edges in reconstructed nuclear recoil energy [keV]-- the binwise likelihood is computed in bins from these edges (and the migration matrix has the same edges)",
         "title": "Reconstructed NR recoil energy",
         "unit": "KeV",
         "low_edge": 0.0,
@@ -14,7 +14,7 @@
         "N": 81
     },
     "Yedges": {
-        "info": "Expected NR signal in each bin for which the profiled likelihood ratio is computed ",
+        "info": "The binwise likelihood is computed for a range of signals (here from 0 to 3). For plotting convenience, the edges are written so that the center of each bin corresponds to the signal for which the binwise likelihood was computed.",
         "title": "Signal Expectation",
         "unit": "#",
         "low_edge": -0.015,
@@ -22,7 +22,7 @@
         "N": 102
     },
     "Z": {
-        "info": "Migration matrix from true energy (first axis) to reconstructed energy (second axis) expressed as probability of an event in a certain true energy bin ending up in a certain reconstructed energy bin. This includes both dispersion and efficiency, so the probabilities in a given true energy bin sum up to the efficiency",
+        "info": "Binwise likelihood comptued in bins of reconstructed energy (1st axis), as function of true signal expected in that bin (2nd axes). See paper for details of interpreting this object.",
         "title": "$\\lambda_\\mathrm{bin}(s)$",
         "unit": "LL",
         "Data": {
