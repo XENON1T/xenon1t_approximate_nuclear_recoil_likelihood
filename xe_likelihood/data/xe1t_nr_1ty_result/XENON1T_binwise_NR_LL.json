@@ -22,7 +22,7 @@
         "N": 102
     },
     "Z": {
-        "info": "Binwise likelihood comptued in bins of reconstructed energy (1st axis), as function of true signal expected in that bin (2nd axes). See paper for details of interpreting this object.",
+        "info": "Binwise likelihood computed in bins of reconstructed energy (1st axis), as function of true signal expected in that bin (2nd axes). See paper for details of interpreting this object.",
         "title": "$\\lambda_\\mathrm{bin}(s)$",
         "unit": "LL",
         "Data": {
