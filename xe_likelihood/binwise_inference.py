@@ -108,7 +108,7 @@ class BinwiseInference:
 
         migration_matrix = Hist2DCollection.from_package(xent_nr_20ty_projection, "XENONnT_binwise_NR_MM.json",
                                                          name="XENONnT Migration-Matrix")
-        likelihood_matrix = Hist2DCollection.from_package(xent_nr_20ty_projection, "XENONnT_binwise_NR_LL_toyMC.json",
+        likelihood_matrix = Hist2DCollection.from_package(xent_nr_20ty_projection, "XENONnT_binwise_NR_LL_toyMC.json.gz",
                                                          name="XENONnT Likelihood-Matrix")
         
         return cls(name="XENONnT",

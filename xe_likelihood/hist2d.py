@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import json
 import logging
+import gzip
 
 try:
     import importlib.resources as pkg_resources
@@ -58,14 +59,21 @@ class Hist2DCollection:
 
     @classmethod
     def from_file(cls, path, name=''):
-        with open(path) as f:
-            data = json.load(f)
+        """
+        reads json file (possibly zipped) to histogram format
+        """
+        if str(path).endswith(".gz"):
+            with gzip.open(path,"r") as f:
+                data = json.load(f)
+        else:
+            with open(path) as f:
+                data = json.load(f)
         return cls.from_dict(data, name=name)
 
     @classmethod
     def from_package(cls, module, fname, name=''):
-        data = json.load(pkg_resources.open_text(module, fname))
-        return cls.from_dict(data, name=name)
+        with pkg_resources.path(module, fname) as path:
+            return cls.from_file(str(path), name)
 
     @classmethod
     def from_dict(cls, data, name=''):
