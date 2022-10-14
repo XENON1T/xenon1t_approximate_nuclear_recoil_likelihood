@@ -25,6 +25,9 @@ Will produce something like this:
 Citation
 ========
 
-If you use this package, please cite the following papers
+If you use this package, please cite the following papers: 
+
+- the paper describing this method: https://arxiv.org/abs/2210.07231
+- the paper for the data used: https://arxiv.org/abs/1805.12562
 
 
