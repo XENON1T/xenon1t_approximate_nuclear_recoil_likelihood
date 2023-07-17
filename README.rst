@@ -13,6 +13,7 @@ Installation
 .. code-block:: bash
     pip install xe-likelihood
 
+Simple example: 
 .. code-block:: python
 
     from xe_likelihood import BinwiseInference, Spectrum
