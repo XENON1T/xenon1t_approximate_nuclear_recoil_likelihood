@@ -9,10 +9,11 @@ Example XENON1T based inference
 =====
 Installation 
 =====
+In the folder where you've downloaded this repository: 
 
 .. code-block:: python
-
-    pip install xe-likelihood
+    
+    pip install -e .
 
 
 Simple example: 
