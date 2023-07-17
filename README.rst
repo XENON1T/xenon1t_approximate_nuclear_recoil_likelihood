@@ -6,6 +6,13 @@ Binwise approximations of the XENON1T likelihood and XENONnT projections for fas
 
 Example XENON1T based inference
 
+=====
+Installation 
+=====
+
+.. code-block:: bash
+    pip install xe-likelihood
+
 .. code-block:: python
 
     from xe_likelihood import BinwiseInference, Spectrum
