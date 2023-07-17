@@ -10,10 +10,13 @@ Example XENON1T based inference
 Installation 
 =====
 
-.. code-block:: bash
+.. code-block:: python
+
     pip install xe-likelihood
 
+
 Simple example: 
+
 .. code-block:: python
 
     from xe_likelihood import BinwiseInference, Spectrum
