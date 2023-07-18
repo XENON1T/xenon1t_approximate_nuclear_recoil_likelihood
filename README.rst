@@ -6,9 +6,10 @@ Binwise approximations of the XENON1T likelihood and XENONnT projections for fas
 
 Example XENON1T based inference
 
-=====
+============
 Installation 
-=====
+============
+
 In the folder where you've downloaded this repository: 
 
 .. code-block:: python
